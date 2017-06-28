@@ -12,4 +12,17 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+   .sass('resources/assets/sass/app.scss', 'public/css')
+   .browserSync('localhost:8000');
+
+
+
+// Test which is fastes livereload or browsersync
+
+// let LiveReloadPlugin = require('webpack-livereload-plugin');
+
+// mix.webpackConfig({
+//     plugins: [
+//         new LiveReloadPlugin({ post: 8000 })
+//     ]
+// });

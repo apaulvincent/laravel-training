@@ -11,20 +11,42 @@
 |
 */
 
-Route::get('/tasks', function () {
+// use App\Task;
 
-    // $tasks = DB::table('tasks')->latest()->get();
-    $tasks = App\Task::all();
+Route::get('/', 'PostsController@index');
 
-    return view('tasks.index', compact('tasks'));
-});
+Route::get('/posts/{post}', 'PostsController@show');
+
+// Controller => PostsController
+
+// Eloquent Model => Post
+
+// Migration => create_posts_table
+
+// php artisan make:model Post -mc
 
 
-Route::get('/tasks/{id}', function ($id) {
 
-    // $task = DB::table('tasks')->find($id);
-    $task = App\Task::find($id);
+Route::get('/tasks', 'TasksController@index' );
 
-    // dd($task);
-    return view('tasks.show', compact('task'));
-});
+// Route::get('/tasks', function () {
+
+//     // $tasks = DB::table('tasks')->latest()->get();
+//     $tasks = App\Task::all();
+
+//     return view('tasks.index', compact('tasks'));
+// });
+
+
+Route::get('/tasks/{task}', 'TasksController@show' );
+
+// Route::get('/tasks/{id}', function ($id) {
+
+//     // $task = DB::table('tasks')->find($id);
+//     $task = App\Task::find($id);
+
+//     // dd($task);
+//     return view('tasks.show', compact('task'));
+// });
+
+
