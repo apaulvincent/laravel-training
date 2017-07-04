@@ -41404,7 +41404,11 @@ var Component = __webpack_require__(37)(
   /* moduleIdentifier (server only) */
   null
 )
+<<<<<<< HEAD
 Component.options.__file = "D:\\Projects\\Personal\\laravel-training\\resources\\assets\\js\\components\\Example.vue"
+=======
+Component.options.__file = "D:\\__Personal_Projects\\laravel-training\\resources\\assets\\js\\components\\Example.vue"
+>>>>>>> bc238e4b063ac824aca8eac143bee9fa555bcf11
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Example.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -41545,7 +41549,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -41572,7 +41575,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel-heading"
   }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
     staticClass: "panel-body"
-  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
+  }, [_vm._v("I'm an example component!")])])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
