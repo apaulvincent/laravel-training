@@ -65,6 +65,7 @@ Route::post('/register', 'RegistrationController@store');
 
 
 Route::get('/login', 'SessionController@create');
+Route::get('/logout', 'SessionController@destroy');
 
 
 // Auth::routes();

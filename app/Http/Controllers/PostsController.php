@@ -56,7 +56,6 @@ class PostsController extends Controller
         ]);
 
 
-
         // Another shortcut to save data...
         Post::create(request(['title', 'body']));
 

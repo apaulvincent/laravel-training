@@ -10,7 +10,9 @@
                 <hr>
 
                 <form method="POST" action="/posts">
+
                 {{ csrf_field() }}
+
                 <div class="form-group">
                     <label for="titleInput">Title</label>
                     <input type="text" name="title" class="form-control" id="titleInput" placeholder="Title">

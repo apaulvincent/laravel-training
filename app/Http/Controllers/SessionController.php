@@ -10,4 +10,11 @@ class SessionController extends Controller
     {
         return view('sessions.create');
     }
+
+    public function destroy()
+    {
+        auth()->logout();
+        redirect()->home();
+    }
+
 }

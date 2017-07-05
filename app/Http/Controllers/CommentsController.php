@@ -17,7 +17,7 @@ class CommentsController extends Controller
         ]);
 
 
-        $post->addComment(request('body'));
+        $post->addComment(request(['body']));
 
         return back();
         // And then redirect to post page
