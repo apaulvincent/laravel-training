@@ -13,7 +13,12 @@
 
 // use App\Task;
 
-Route::get('/', 'PostsController@index');
+Route::get('/', 'PostsController@index')->name('home'); 
+
+
+Route::get('/posts/create', 'PostsController@create');
+
+Route::post('/posts', 'PostsController@store');
 
 Route::get('/posts/{post}', 'PostsController@show');
 
@@ -25,6 +30,9 @@ Route::get('/posts/{post}', 'PostsController@show');
 
 // php artisan make:model Post -mc
 
+
+Route::post('/posts/{post}/comments', 'CommentsController@store');
+ 
 
 
 Route::get('/tasks', 'TasksController@index' );
@@ -50,3 +58,15 @@ Route::get('/tasks/{task}', 'TasksController@show' );
 // });
 
 
+Route::get('/register', 'RegistrationController@create');
+Route::post('/register', 'RegistrationController@store');
+
+
+
+
+Route::get('/login', 'SessionController@create');
+
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
