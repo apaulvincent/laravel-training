@@ -5,7 +5,11 @@
                 @include('parts.navigation')
             </div>
             <div class="col-md-6">
-                <div class="pull-right">Rene</div>
+
+                @if( Auth::check() )
+                <div class="pull-right">{{ Auth::user()->name }}</div>
+                @endif 
+
             </div>
         </div>
     </div>
